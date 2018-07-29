@@ -1,18 +1,46 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.2
+import QtQuick.Controls.Material 2.0
 
 Page {
-    width: 600
-    height: 400
-
-    header: Label {
-        text: qsTr("Page 1")
-        font.pixelSize: Qt.application.font.pixelSize * 2
-        padding: 10
-    }
-
-    Label {
-        text: qsTr("You are on Page 1.")
-        anchors.centerIn: parent
+    width: screen.Width
+    height: screen.Height
+    property string titleScreen
+    property string itemList
+    Row {
+        id: templateList
+        x: 0
+        y: 0
+        width: 600
+        height: 400
+        Row {
+            id: top_bar
+            width: 600
+            padding: 5
+            Button {
+                id: back
+                text: qsTr("Back")
+            }
+            Text {
+                id: titleText
+                text: qsTr("Title")
+                font.pixelSize: 16
+            }
+        }
+        Row {
+            id: wrapper
+            padding: 20
+            Rectangle {
+                id: item
+                Text {
+                    text: templateList.itemList
+                }
+            }
+        }
     }
 }
+
+/*##^## Designer {
+    D{i:4;anchors_y:0}
+}
+ ##^##*/
