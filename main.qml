@@ -7,8 +7,9 @@ ApplicationWindow {
     width: screen.width
     height: screen.height
     title: qsTr("Cartainment System")
-    RearCameraScreen{
-        widthCamera: mainWindow.width
-        heightCamera: mainWindow.height
+
+    MenuUI{
+        width: parent.width
+        height: parent.height
     }
 }

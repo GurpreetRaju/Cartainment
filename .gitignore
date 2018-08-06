@@ -71,3 +71,6 @@ Thumbs.db
 *.dll
 *.exe
 
+
+#images folder
+img/*
