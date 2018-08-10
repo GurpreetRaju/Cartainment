@@ -1,16 +1,12 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>Page1Form.ui.qml</file>
-        <file>Page2Form.ui.qml</file>
         <file>qtquickcontrols2.conf</file>
         <file>RearCameraScreen.ui.qml</file>
         <file>img/cameraIcon.png</file>
         <file>img/parkingIcon.png</file>
         <file>img/parkingSign.jpg</file>
         <file>img/mediaIcon.png</file>
-        <file>MenuUI.qml</file>
-        <file>MenuUIForm.ui.qml</file>
         <file>img/settingsIcon.png</file>
     </qresource>
 </RCC>
