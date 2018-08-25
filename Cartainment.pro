@@ -8,7 +8,9 @@ SOURCES = \
 
 RESOURCES += qml.qrc
 
-target.path = /home/MyProjects/Cartainment
+target.path = /home/Development/Cartainment
 INSTALLS += target
 
 QT+=widgets
+
+DISTFILES +=

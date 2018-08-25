@@ -34,13 +34,14 @@ ApplicationWindow {
             id: wrapper
             Layout.preferredWidth: parent.width
             Layout.preferredHeight: (parent.height - 30)
-            state: "rearCameraScreen"
+            state: "mainScreen"
 
             states: [
                 State {
                     name: "mainScreen"
                     PropertyChanges { target: mainMenu; visible: true }
                     PropertyChanges { target: rearCameraScreen; visible: false }
+                    PropertyChanges { target: mediaPlayerScreen; visible: false }
                     PropertyChanges { target: backButton; visible: false }
 
                 },
@@ -48,6 +49,14 @@ ApplicationWindow {
                     name: "rearCameraScreen"
                     PropertyChanges { target: mainMenu; visible: false }
                     PropertyChanges { target: rearCameraScreen; visible: true }
+                    PropertyChanges { target: mediaPlayerScreen; visible: false }
+                    PropertyChanges { target: backButton; visible: true }
+                },
+                State {
+                    name: "mediaPlayerScreen"
+                    PropertyChanges { target: mainMenu; visible: false }
+                    PropertyChanges { target: rearCameraScreen; visible: false }
+                    PropertyChanges { target: mediaPlayerScreen; visible: true }
                     PropertyChanges { target: backButton; visible: true }
                 }
             ]
@@ -67,7 +76,7 @@ ApplicationWindow {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         id: mediaplayerButton
-
+                        onClicked: wrapper.state = "mediaPlayerScreen"
                         Image {
                             id: mpImageTag
                             anchors.horizontalCenter: parent.horizontalCenter
@@ -89,7 +98,7 @@ ApplicationWindow {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         id: rearCameraButton
-                        onClicked: wrapper.state = "rearScreenCamera"
+                        onClicked: wrapper.state = "rearCameraScreen"
 
                         Image {
                             id: rcImageTag
@@ -154,6 +163,11 @@ ApplicationWindow {
             }
             RearCameraScreen{
                 id: rearCameraScreen
+                anchors.fill: parent
+            }
+
+            MediaPlayerScreen{
+                id: mediaPlayerScreen
                 anchors.fill: parent
             }
 

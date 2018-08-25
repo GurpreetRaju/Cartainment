@@ -5,8 +5,9 @@
         <file>RearCameraScreen.ui.qml</file>
         <file>img/cameraIcon.png</file>
         <file>img/parkingIcon.png</file>
-        <file>img/parkingSign.jpg</file>
         <file>img/mediaIcon.png</file>
         <file>img/settingsIcon.png</file>
+        <file>MediaPlayerScreen.ui.qml</file>
+        <file>img/musicwallpaper.jpg</file>
     </qresource>
 </RCC>
